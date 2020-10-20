@@ -4,8 +4,8 @@ cloud:
       static: us-east-1
       auto: false
     credentials:
-      access-key: ASIAVBVJK2FHYO2JRXN2
-      secret-key: vllW7AFr8yxtM8nv4ZTTr7k5rZwEAmUBZfU8JLY6
+      access-key:
+      secret-key:
     end-point:
       uri: https://sqs.us-east-1.amazonaws.com/347173736783/ColaTAInboxSantiago
 spring:

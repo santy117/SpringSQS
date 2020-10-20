@@ -23,15 +23,6 @@ import java.util.List;
 @Configuration
 public class SQSConfig {
 
-    @Value("${aws_access_key_id}")
-    private String awsId;
-
-    @Value("${aws_secret_access_key}")
-    private String awsKey;
-
-    @Value("${aws_session_token}")
-    private String awsSession;
-
     @Value("${jsa.s3.region}")
     private String region;
 
@@ -42,7 +33,6 @@ public class SQSConfig {
 
     public AmazonSQSAsync amazonSQSAsync() {
         return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.US_EAST_1)
-                .withCredentials(new AWSStaticCredentialsProvider(new BasicSessionCredentials(awsId, awsKey, awsSession)))
                 .build();
     }
 
